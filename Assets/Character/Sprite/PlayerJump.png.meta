@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 92496a76376b06545969b6c19a31bedc
+guid: e8d21b3581f15a748ade89786b7efe2a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8347439528173591061
-    second: Player 1-1
+      213: -6929607696539217594
+    second: Heaven - MC (Jump)-Sheet_0
   - first:
-      213: -1817201903232714184
-    second: Player1-2
+      213: 4306708924251758502
+    second: Heaven - MC (Jump)-Sheet_1
   - first:
-      213: 211497298677602336
-    second: Player 1-3
+      213: 1289530526809347655
+    second: Heaven - MC (Jump)-Sheet_2
   - first:
-      213: 2503365366160099655
-    second: Player 1-4
+      213: 1397469967924078721
+    second: Heaven - MC (Jump)-Sheet_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,85 +103,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player 1-1
+      name: Heaven - MC (Jump)-Sheet_0
       rect:
         serializedVersion: 2
         x: 238
         y: 158
-        width: 164
-        height: 284
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be5a82bc9ffe72c80800000000000000
-      internalID: -8347439528173591061
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player1-2
-      rect:
-        serializedVersion: 2
-        x: 878
-        y: 158
-        width: 164
-        height: 294
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 83a76a83f7008c6e0800000000000000
-      internalID: -1817201903232714184
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player 1-3
-      rect:
-        serializedVersion: 2
-        x: 1518
-        y: 158
         width: 174
-        height: 294
+        height: 264
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02812ae2ca36fe200800000000000000
-      internalID: 211497298677602336
+      spriteID: 64197feb38615df90800000000000000
+      internalID: -6929607696539217594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player 1-4
+      name: Heaven - MC (Jump)-Sheet_1
       rect:
         serializedVersion: 2
-        x: 2158
-        y: 158
+        x: 888
+        y: 198
         width: 164
-        height: 284
+        height: 274
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7490df0898dbdb220800000000000000
-      internalID: 2503365366160099655
+      spriteID: 6afd70dd2f084cb30800000000000000
+      internalID: 4306708924251758502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heaven - MC (Jump)-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 248
+        width: 134
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7465e719e2555e110800000000000000
+      internalID: 1289530526809347655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heaven - MC (Jump)-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 2198
+        y: 298
+        width: 134
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 188246e188fc46310800000000000000
+      internalID: 1397469967924078721
       vertices: []
       indices: 
       edges: []

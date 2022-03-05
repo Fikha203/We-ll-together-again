@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: 92496a76376b06545969b6c19a31bedc
+guid: 60f1acc2ad28f794d8e96088048ad4f6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8347439528173591061
-    second: Player 1-1
+      213: -4076436055245133729
+    second: Heaven - MC (Run) - Sheet_0
   - first:
-      213: -1817201903232714184
-    second: Player1-2
+      213: 1798290591215246380
+    second: Heaven - MC (Run) - Sheet_1
   - first:
-      213: 211497298677602336
-    second: Player 1-3
+      213: -2979574670345544549
+    second: Heaven - MC (Run) - Sheet_2
   - first:
-      213: 2503365366160099655
-    second: Player 1-4
+      213: 8716456795167690238
+    second: Heaven - MC (Run) - Sheet_3
+  - first:
+      213: 7498797578104642165
+    second: Heaven - MC (Run) - Sheet_4
+  - first:
+      213: 9183990944429022582
+    second: Heaven - MC (Run) - Sheet_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,85 +109,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player 1-1
+      name: Heaven - MC (Run) - Sheet_0
       rect:
         serializedVersion: 2
-        x: 238
-        y: 158
-        width: 164
-        height: 284
+        x: 237
+        y: 157
+        width: 175
+        height: 266
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be5a82bc9ffe72c80800000000000000
-      internalID: -8347439528173591061
+      spriteID: f58e48171079d67c0800000000000000
+      internalID: -4076436055245133729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player1-2
+      name: Heaven - MC (Run) - Sheet_1
       rect:
         serializedVersion: 2
         x: 878
-        y: 158
-        width: 164
-        height: 294
+        y: 157
+        width: 175
+        height: 255
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83a76a83f7008c6e0800000000000000
-      internalID: -1817201903232714184
+      spriteID: c2cdf44d3cfc4f810800000000000000
+      internalID: 1798290591215246380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player 1-3
+      name: Heaven - MC (Run) - Sheet_2
       rect:
         serializedVersion: 2
-        x: 1518
-        y: 158
-        width: 174
-        height: 294
+        x: 1527
+        y: 157
+        width: 165
+        height: 246
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02812ae2ca36fe200800000000000000
-      internalID: 211497298677602336
+      spriteID: b9c5d40bf9c66a6d0800000000000000
+      internalID: -2979574670345544549
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player 1-4
+      name: Heaven - MC (Run) - Sheet_3
       rect:
         serializedVersion: 2
-        x: 2158
-        y: 158
-        width: 164
-        height: 284
+        x: 2157
+        y: 157
+        width: 175
+        height: 266
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7490df0898dbdb220800000000000000
-      internalID: 2503365366160099655
+      spriteID: efd8200064317f870800000000000000
+      internalID: 8716456795167690238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heaven - MC (Run) - Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2808
+        y: 157
+        width: 165
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57a9c7dbaa4111860800000000000000
+      internalID: 7498797578104642165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heaven - MC (Run) - Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 3447
+        y: 157
+        width: 165
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d9817ea17147f70800000000000000
+      internalID: 9183990944429022582
       vertices: []
       indices: 
       edges: []
