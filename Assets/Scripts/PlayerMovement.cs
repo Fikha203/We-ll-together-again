@@ -6,18 +6,18 @@ public class PlayerMovement : MonoBehaviour
 {
 
 
-    [SerializeField]
-    private float moveSpeed = 10f;
-    [SerializeField]
-    private float jumpForce = 5f;
+    [SerializeField] private float moveSpeed = 10f;
+    [SerializeField] private float jumpForce = 5f;
 
     private float movementX;
 
     private Rigidbody2D rb;
     private SpriteRenderer sr;
     private Animator anim;
+    private BoxCollider2D boxc;
+    [SerializeField] private LayerMask jumpableGround;
 
-    private bool onGround = true;
+    private enum MoveState {idle, run, jump, fall}
 
     private void Awake()
     {
@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        boxc = GetComponent<BoxCollider2D>();
     }
 
     // Start is called before the first frame update
@@ -38,58 +39,77 @@ public class PlayerMovement : MonoBehaviour
     {
       PlayerMove();
       PlayerJump();
+      AnimationUpdate();
     }
 
     void PlayerMove() {
 
         // input keyboard "A D <- ->"
         movementX = Input.GetAxisRaw("Horizontal");
+        rb.velocity = new Vector2(movementX * moveSpeed, rb.velocity.y);
 
-        if(movementX > 0){
+        /*if(movementX > 0){
             // gerak ke kanan
             transform.position += transform.right * (Time.deltaTime * moveSpeed);
-            // hadap kanan
-            sr.flipX = false;
-            // animasi lari
-            if(onGround){
-                anim.SetBool("Walk",true);
-            }
 
         }
         else if(movementX < 0){
             // gerak ke kiri
             transform.position -= transform.right * (Time.deltaTime * moveSpeed);
-            // hadap kiri
-            sr.flipX = true;
-            // animasi lari
-            if(onGround){
-                anim.SetBool("Walk",true);
-            }
-        }
-        else {
-            // idle
-            anim.SetBool("Walk",false);
-        }
-        
+        }*/
     }
 
     void PlayerJump(){
-        if(Input.GetButtonDown("Jump") && onGround){
-            anim.SetBool("Walk",false);
-            anim.SetBool("Jump",true);
-
-            onGround = false;
-
+        if(Input.GetButtonDown("Jump") && IsGrounded())
+        {
             rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
         }
     }
 
     // Cek menyentuh tanah
-    private void OnCollisionEnter2D(Collision2D collision) {
-        
+    /*private void OnCollisionEnter2D(Collision2D collision) 
+    {
         if(collision.gameObject.CompareTag("Ground")){
             onGround = true;
-            anim.SetBool("Jump",false);
         }
+    }*/
+
+    private void AnimationUpdate()
+    {
+        MoveState state = 0;
+        if(movementX > 0){
+            // hadap kanan
+            sr.flipX = false;
+            // animasi lari
+            state = MoveState.run;
+
+        }
+        else if(movementX < 0)
+        {
+            // hadap kiri
+            sr.flipX = true;
+            // animasi lari
+            state = MoveState.run;
+        }
+        else 
+        {
+            // idle
+            state = MoveState.idle;
+        }
+        if(rb.velocity.y > .1f)
+        {
+            // animasi jump
+            state = MoveState.jump;
+        }
+        else if(rb.velocity.y < -.1f)
+        {
+            // animasi fall
+            state = MoveState.fall;
+        }
+        anim.SetInteger("state", (int)state);
     }
-} // class
+
+    private bool IsGrounded(){
+        return Physics2D.BoxCast(boxc.bounds.center, boxc.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
+    }
+} 
