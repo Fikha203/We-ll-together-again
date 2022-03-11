@@ -1,13 +1,25 @@
 fileFormatVersion: 2
-guid: 508c87106a2fa6f4780e25e34f5e23d2
+guid: 77a3c82cce4ca5d429ab9871a821d824
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8011013491106509429
-    second: Heaven - MC (Fall)-Sheet (2)_0
+      213: 1320701901668343118
+    second: Heaven - MC (Death 1)-Sheet_0
   - first:
-      213: 4212030758457079858
-    second: Heaven - MC (Fall)-Sheet (2)_1
+      213: -4929659028752445362
+    second: Heaven - MC (Death 1)-Sheet_1
+  - first:
+      213: -6059165946638698122
+    second: Heaven - MC (Death 1)-Sheet_2
+  - first:
+      213: -7919430085554565912
+    second: Heaven - MC (Death 1)-Sheet_3
+  - first:
+      213: 99001194024756121
+    second: Heaven - MC (Death 1)-Sheet_4
+  - first:
+      213: 2352902656704289015
+    second: Heaven - MC (Death 1)-Sheet_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -97,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Heaven - MC (Fall)-Sheet (2)_0
+      name: Heaven - MC (Death 1)-Sheet_0
       rect:
         serializedVersion: 2
-        x: 250
-        y: 200
-        width: 140
-        height: 260
+        x: 238
+        y: 158
+        width: 164
+        height: 284
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +123,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8d0cbb8ca923d090800000000000000
-      internalID: -8011013491106509429
+      spriteID: e4ddf17d163145210800000000000000
+      internalID: 1320701901668343118
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heaven - MC (Fall)-Sheet (2)_1
+      name: Heaven - MC (Death 1)-Sheet_1
       rect:
         serializedVersion: 2
-        x: 890
-        y: 200
-        width: 140
-        height: 260
+        x: 878
+        y: 158
+        width: 184
+        height: 294
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,8 +144,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2387ad498a3247a30800000000000000
-      internalID: 4212030758457079858
+      spriteID: e40d9675b35569bb0800000000000000
+      internalID: -4929659028752445362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heaven - MC (Death 1)-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 158
+        width: 184
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 679f473aca489eba0800000000000000
+      internalID: -6059165946638698122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heaven - MC (Death 1)-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 2138
+        y: 348
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec8afecb48881290800000000000000
+      internalID: -7919430085554565912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heaven - MC (Death 1)-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2148
+        y: 158
+        width: 174
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9936f2abf09bf5100800000000000000
+      internalID: 99001194024756121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heaven - MC (Death 1)-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 2798
+        y: 158
+        width: 164
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f89ee3008037a020800000000000000
+      internalID: 2352902656704289015
       vertices: []
       indices: 
       edges: []
