@@ -11,7 +11,7 @@ public class ItemCollector : MonoBehaviour
         {
             Destroy(collision.gameObject);
             appleCount++;
-            Debug.Log("apple : " + appleCount);
+            Debug.Log("apple = " + appleCount);
         }    
     }
 

@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 2287874741110941988}
   - component: {fileID: 1484197124}
   - component: {fileID: 1484197123}
-  - component: {fileID: 975483500}
   - component: {fileID: 231786687}
+  - component: {fileID: 2039918245058263338}
   m_Layer: 0
   m_Name: PlayerSurga
   m_TagString: Player
@@ -171,19 +171,6 @@ MonoBehaviour:
   jumpableGround:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &975483500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4873720290074689694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6edb5a872ee07e64483e1abf80625fcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fallDetector: {fileID: 0}
 --- !u!114 &231786687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,3 +183,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af88158e004d75041bf5988338085b94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2039918245058263338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4873720290074689694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cae7dc6abe73c747931dad6a551157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallDetector: {fileID: 0}

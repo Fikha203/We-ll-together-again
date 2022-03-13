@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class PlayerDeath : MonoBehaviour
+public class PlayerRespawn : MonoBehaviour
 {
     private Animator anim;
     private Rigidbody2D rb;
@@ -27,8 +26,7 @@ public class PlayerDeath : MonoBehaviour
         // mati kena trap
         if(collision.gameObject.CompareTag("Trap"))
         {
-            rb.bodyType = RigidbodyType2D.Static;
-            anim.SetTrigger("death");
+            Die();
         }
     }
     private void OnTriggerEnter2D(Collider2D collision) 
@@ -41,11 +39,15 @@ public class PlayerDeath : MonoBehaviour
         // Update Chekpoint 
         else if(collision.gameObject.CompareTag("Checkpoint"))
         {
-            Debug.Log("checkpoint");
             respawnPoint = transform.position;
         }
     }
 
+    private void Die()
+    {
+        rb.bodyType = RigidbodyType2D.Static;
+        anim.SetTrigger("death");
+    }
     private void RespawnDie()
     {
         transform.position = respawnPoint;
@@ -57,12 +59,5 @@ public class PlayerDeath : MonoBehaviour
     {
         transform.position = respawnPoint;
     }
-
-    /*private void RestartLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }*/
-
-
 
 }
