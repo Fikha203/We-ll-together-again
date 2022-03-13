@@ -5,6 +5,7 @@ using UnityEngine;
 public class ChestAnim : MonoBehaviour
 {
     private Animator anim;
+    
     // Start is called before the first frame update
     void Awake()
     {
@@ -16,7 +17,12 @@ public class ChestAnim : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            anim.SetTrigger("ChestOpen");
-        }
+            anim.SetBool("ChestOpen",true);
+        } 
     }
+    private void ChestIdle()
+    {
+        anim.SetBool("ChestOpen",false);
+    }
+    
 }

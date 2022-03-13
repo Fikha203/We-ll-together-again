@@ -48,15 +48,6 @@ public class PlayerMovement : MonoBehaviour
         movementX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(movementX * moveSpeed, rb.velocity.y);
 
-        /*if(movementX > 0){
-            // gerak ke kanan
-            transform.position += transform.right * (Time.deltaTime * moveSpeed);
-
-        }
-        else if(movementX < 0){
-            // gerak ke kiri
-            transform.position -= transform.right * (Time.deltaTime * moveSpeed);
-        }*/
     }
 
     void PlayerJump(){
@@ -65,15 +56,6 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
         }
     }
-
-    // Cek menyentuh tanah
-    /*private void OnCollisionEnter2D(Collision2D collision) 
-    {
-        if(collision.gameObject.CompareTag("Ground")){
-            onGround = true;
-        }
-    }*/
-
     private void AnimationUpdate()
     {
         MoveState state = 0;
