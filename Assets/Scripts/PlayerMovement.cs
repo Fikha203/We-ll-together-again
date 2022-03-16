@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     private BoxCollider2D boxc;
     [SerializeField] private LayerMask jumpableGround;
+    public bool isFacingRight;
 
     private enum MoveState {idle, run, jump, fall}
 
@@ -66,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
             sr.flipX = false;
             // animasi lari
             state = MoveState.run;
+            isFacingRight = true;
 
         }
         else if(movementX < 0)
@@ -74,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
             sr.flipX = true;
             // animasi lari
             state = MoveState.run;
+            isFacingRight = false;
         }
         else 
         {
@@ -93,12 +96,12 @@ public class PlayerMovement : MonoBehaviour
         anim.SetInteger("state", (int)state);
     }
 
-    private bool IsGrounded(){
+    public bool IsGrounded(){
         return Physics2D.BoxCast(boxc.bounds.center, boxc.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
     }
-
-    public bool CanAttack()
+    public float GetMovementX()
     {
-        return IsGrounded();
+        return movementX;
     }
+
 } 
