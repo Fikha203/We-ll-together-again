@@ -94,4 +94,9 @@ public class PlayerMovement : MonoBehaviour
     private bool IsGrounded(){
         return Physics2D.BoxCast(boxc.bounds.center, boxc.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
     }
+
+    public bool CanAttack()
+    {
+        return IsGrounded();
+    }
 } 
