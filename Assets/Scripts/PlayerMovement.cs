@@ -55,6 +55,8 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
         }
+        
+        
     }
     private void AnimationUpdate()
     {
