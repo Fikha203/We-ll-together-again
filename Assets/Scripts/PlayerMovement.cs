@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     private BoxCollider2D boxc;
     [SerializeField] private LayerMask jumpableGround;
-    public bool isFacingRight;
+    [HideInInspector] public bool isFacingRight = true;
 
     private enum MoveState {idle, run, jump, fall}
 
@@ -98,10 +98,6 @@ public class PlayerMovement : MonoBehaviour
 
     public bool IsGrounded(){
         return Physics2D.BoxCast(boxc.bounds.center, boxc.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
-    }
-    public float GetMovementX()
-    {
-        return movementX;
     }
 
 } 

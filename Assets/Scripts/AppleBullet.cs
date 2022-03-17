@@ -4,21 +4,23 @@ using UnityEngine;
 
 public class AppleBullet : MonoBehaviour
 {
-    [SerializeField] private float bulletSpeed;
     private bool hit;
     private BoxCollider2D boxc;
+    [SerializeField] private float destroyTime = 2;
+    private float destroyTimer;
     private void Awake() {
         boxc = GetComponent<BoxCollider2D>();
     }
     private void Update() {
-        if(hit) return;
-        float movementSpeed = bulletSpeed * Time.deltaTime;
-        transform.Translate(movementSpeed,0,0);
+        if(hit || destroyTimer > destroyTime)
+        {
+            Destroy(gameObject);
+        }
+        destroyTimer += Time.deltaTime;
     }
     private void OnTriggerEnter2D(Collider2D other) 
     {
         hit = true;
-        boxc.enabled = false;
     }
 
 }

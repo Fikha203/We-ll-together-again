@@ -16,36 +16,40 @@ public class PlayerAttack : MonoBehaviour
     private void Awake() {
         player = GetComponent<PlayerMovement>();
         anim = GetComponent<Animator>();
+        float position = shootPoint.localPosition.x;
     }
     private void Update() {
-        if(Input.GetKeyDown("j") && cooldownTimer > attackCooldown && player.IsGrounded())
+        if(Input.GetKeyDown("j") && cooldownTimer > attackCooldown && player.IsGrounded() && !GetComponent<PlayerRespawn>().isDeath)
         {
             Attack();
         }
         
         cooldownTimer += Time.deltaTime;
-        if(!player.isFacingRight)
-        {
-            shootPoint.position *= -1;
-        }
-        else 
-        {
-            shootPoint.position *= -1;
-        }
     }
     private void Attack()
     {
+        if(GetComponent<ItemCollector>().appleCount == 0)
+        {
+            return;
+        }
         anim.SetTrigger("attack");
         cooldownTimer = 0;
-        GameObject temp = Instantiate(bullet, shootPoint.position, bullet.transform.rotation);
+        GetComponent<ItemCollector>().appleCount--;
+
+    }
+    void bulletOut()
+    {
         if(player.isFacingRight)
         {
+            shootPoint.localPosition = new Vector2(1,shootPoint.localPosition.y);
+            GameObject temp = Instantiate(bullet, shootPoint.position, bullet.transform.rotation);
             temp.GetComponent<Rigidbody2D>().AddForce(Vector2.right * bulletForce);
         }
         else 
         {
+            shootPoint.localPosition = new Vector2(-1,shootPoint.localPosition.y);
+            GameObject temp = Instantiate(bullet, shootPoint.position, bullet.transform.rotation);
             temp.GetComponent<Rigidbody2D>().AddForce(Vector2.left * bulletForce);
         }
-
     }
 }

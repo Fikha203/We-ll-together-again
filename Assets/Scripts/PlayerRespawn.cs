@@ -9,6 +9,7 @@ public class PlayerRespawn : MonoBehaviour
 
     private Vector2 respawnPoint;
     public GameObject fallDetector;
+    [HideInInspector] public bool isDeath = false;
 
     private void Awake() {
         anim = GetComponent<Animator>();
@@ -45,14 +46,18 @@ public class PlayerRespawn : MonoBehaviour
 
     private void Die()
     {
+        GetComponent<PlayerMovement>().enabled = false;
         rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("death");
+        isDeath = true;
     }
     private void RespawnDie()
     {
-        transform.position = respawnPoint;
-        anim.SetTrigger("respawn");
+        GetComponent<PlayerMovement>().enabled = true;
         rb.bodyType = RigidbodyType2D.Dynamic;
+        anim.SetTrigger("respawn");
+        isDeath = false;
+        transform.position = respawnPoint;
     }
 
     private void RespawnFall()

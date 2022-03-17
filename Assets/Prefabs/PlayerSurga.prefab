@@ -173,6 +173,7 @@ MonoBehaviour:
   jumpableGround:
     serializedVersion: 2
     m_Bits: 64
+  isFacingRight: 1
 --- !u!114 &231786687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,6 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af88158e004d75041bf5988338085b94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  appleCount: 0
 --- !u!114 &1606776454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,6 +202,7 @@ MonoBehaviour:
   attackCooldown: 1
   bullet: {fileID: 6951947493390104453, guid: dc41234f82e02094981c8680e4615077, type: 3}
   shootPoint: {fileID: 2740153992861642842}
+  bulletForce: 200
 --- !u!114 &8354588811179136756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,6 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallDetector: {fileID: 0}
+  isDeath: 0
 --- !u!1 &9005270323069218210
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,7 +241,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9005270323069218210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.38, y: -0.24, z: 0}
+  m_LocalPosition: {x: 1.5, y: -0.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4873720290074689681}
