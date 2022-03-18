@@ -10,7 +10,7 @@ public class PlayerAttack : MonoBehaviour
     private float cooldownTimer = Mathf.Infinity;
     public GameObject bullet;
     public Transform shootPoint;
-    [SerializeField] private float bulletForce = 200f;
+    [SerializeField] private float bulletForce = 300f;
 
 
     private void Awake() {

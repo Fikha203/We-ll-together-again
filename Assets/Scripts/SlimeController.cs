@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlimeEnemyHP : MonoBehaviour
+public class SlimeController : MonoBehaviour
 {
-    public int enemyHP;
+   public int enemyHP;
     private int currentHP;
 
     private Animator theAnim;
@@ -25,11 +25,11 @@ public class SlimeEnemyHP : MonoBehaviour
    
     void Update()
     {
-        if(currentHP == 0)
+        if(currentHP <= 0)
         {
            //isDead = true;
            //theAnim.SetBool("Dead", isDead);
-           theAnim.SetTrigger("Death");
+           theAnim.SetTrigger("death");
            parentCol.enabled = false;
            HurtCol.enabled = false;
            
@@ -38,10 +38,6 @@ public class SlimeEnemyHP : MonoBehaviour
         {  
             StartCoroutine("KillSwitch"); 
         }*/
-    }
-    private void destorySlime()
-    {
-        Destroy(transform.parent.gameObject);
     }
 
     public void TakeDamage(int damage)
@@ -53,4 +49,5 @@ public class SlimeEnemyHP : MonoBehaviour
         yield return new WaitForSeconds(2f);
         Destroy(transform.parent.gameObject);
     }*/
+
 }

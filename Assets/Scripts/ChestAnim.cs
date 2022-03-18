@@ -17,6 +17,7 @@ public class ChestAnim : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("kena chest");
             anim.SetBool("ChestOpen",true);
         } 
     }

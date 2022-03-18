@@ -20,7 +20,10 @@ public class AppleBullet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other) 
     {
+        if(other.gameObject.CompareTag("Trap") || other.gameObject.CompareTag("Ground"))
+        {
         hit = true;
+        }
     }
 
 }

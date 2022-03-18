@@ -6,8 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
 
 
-    [SerializeField] private float moveSpeed = 10f;
-    [SerializeField] private float jumpForce = 5f;
+    [SerializeField] private float moveSpeed = 7f;
+    [SerializeField] private float jumpForce = 9f;
 
     private float movementX;
 

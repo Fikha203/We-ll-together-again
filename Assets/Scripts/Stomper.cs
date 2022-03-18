@@ -16,8 +16,9 @@ public class Stomper : MonoBehaviour
 
     private void onTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == "Hurt")
+        if(other.gameObject.CompareTag("Hurt"))
         {
+            Debug.Log("Kenaaaa");
             other.gameObject.GetComponent<SlimeEnemyHP>().TakeDamage(damageToDeal);
             theRB2D.AddForce(transform.up * bounceForce, ForceMode2D.Impulse);
         }
