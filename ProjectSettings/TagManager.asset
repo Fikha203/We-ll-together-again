@@ -8,10 +8,11 @@ TagManager:
   - Trap
   - Checkpoint
   - Apple
-  - Hurt
-  - Attack
-  - SlimeHead
   - Bullet
+  - EnemyHead
+  - Sword
+  - pointLeft
+  - pointRight
   layers:
   - Default
   - TransparentFX

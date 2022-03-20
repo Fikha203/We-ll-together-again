@@ -10,11 +10,16 @@ public class PlayerRespawn : MonoBehaviour
     private Vector2 respawnPoint;
     public GameObject fallDetector;
     [HideInInspector] public bool isDeath = false;
+    public GameObject boss;
+    public GameObject enterGate;
+    private Vector2 posAwal;
+
 
     private void Awake() {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         respawnPoint = transform.position;
+        posAwal = boss.transform.position;
 
     }
     private void Update() {
@@ -28,6 +33,12 @@ public class PlayerRespawn : MonoBehaviour
         if(collision.gameObject.CompareTag("Trap"))
         {
             Die();
+            resetBoss();
+        }
+        else if(collision.gameObject.name == "BossSurga")
+        {
+            Die();
+            resetBoss();
         }
     }
     private void OnTriggerEnter2D(Collider2D collision) 
@@ -41,6 +52,11 @@ public class PlayerRespawn : MonoBehaviour
         else if(collision.gameObject.CompareTag("Checkpoint"))
         {
             respawnPoint = transform.position;
+        }
+        else if(collision.gameObject.CompareTag("Sword"))
+        {
+            Die();
+            resetBoss();
         }
     }
 
@@ -63,6 +79,17 @@ public class PlayerRespawn : MonoBehaviour
     private void RespawnFall()
     {
         transform.position = respawnPoint;
+    }
+    private void resetBoss(){
+        boss.SetActive(false);
+        boss.GetComponent<BossController>().health = 3;
+        if(boss.transform.position.x != posAwal.x)
+        {
+            boss.GetComponent<BossController>().Blink();
+        }
+
+        enterGate.GetComponent<BoxCollider2D>().isTrigger = true;
+        enterGate.GetComponent<SpriteRenderer>().enabled = false;
     }
 
 }

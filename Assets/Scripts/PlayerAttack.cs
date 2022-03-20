@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerAttack : MonoBehaviour
     public GameObject bullet;
     public Transform shootPoint;
     [SerializeField] private float bulletForce = 300f;
+    [SerializeField] private Text appleText;
 
 
     private void Awake() {
@@ -35,6 +37,8 @@ public class PlayerAttack : MonoBehaviour
         anim.SetTrigger("attack");
         cooldownTimer = 0;
         GetComponent<ItemCollector>().appleCount--;
+        appleText.text = "Apple: " + GetComponent<ItemCollector>().appleCount;
+
 
     }
     void bulletOut()

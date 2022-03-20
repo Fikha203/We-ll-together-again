@@ -14,9 +14,8 @@ public class PlayerFoot : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.gameObject.CompareTag("SlimeHead"))
+        if(other.gameObject.CompareTag("EnemyHead"))
         {
-            Debug.Log("kenaaaaa");
             other.gameObject.GetComponent<SlimeController>().TakeDamage(damageToDeal);
             rb.AddForce(new Vector2(0f, bounceForce), ForceMode2D.Impulse);
         }

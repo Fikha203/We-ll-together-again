@@ -5,23 +5,32 @@ using UnityEngine;
 public class PatrolMovement : MonoBehaviour
 {
     public float speed;
-    public float distance;
-    private bool movingLeft = true;
-    public Transform groundDetection;
+    private bool facingLeft = true;
+    private int scale = 1;
+    
 
     void Update()
     {
-        transform.Translate(Vector2.left * speed * Time.deltaTime);
-        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, distance);
-        if(groundInfo.collider == false){
-            if(movingLeft == true){
-                transform.eulerAngles = new Vector3(0, 180, 0);
-                movingLeft = false;
-            }
-            else {
-                transform.eulerAngles = new Vector3(0, 0, 0);
-                movingLeft = true;
-            }
+        if(facingLeft)
+        {
+            transform.Translate(Vector2.left * speed * Time.deltaTime);
+        } else {
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
+        }
+
+    }
+    
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.gameObject.CompareTag("pointLeft"))
+        {
+            facingLeft = false;
+            scale*=-1;
+            transform.localScale = new Vector3(scale,1,1);
+        }else if(other.gameObject.CompareTag("pointRight"))
+        {
+            facingLeft = true;
+            scale*=-1;
+            transform.localScale = new Vector3(scale,1,1);
         }
     }
 }

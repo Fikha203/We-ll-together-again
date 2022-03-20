@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 7719487416090132223}
   m_Layer: 0
   m_Name: slimeHead
-  m_TagString: SlimeHead
+  m_TagString: EnemyHead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

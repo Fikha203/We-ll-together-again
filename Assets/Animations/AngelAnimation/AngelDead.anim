@@ -19,14 +19,14 @@ AnimationClip:
   m_FloatCurves: []
   m_PPtrCurves:
   - curve:
-    - time: 0.2
-      value: {fileID: 21300000, guid: e91a252c360dcc242a99bd37d5b071c9, type: 3}
-    - time: 0.43333334
-      value: {fileID: 21300000, guid: 18ba828d285babd4db16579a4916d55e, type: 3}
-    - time: 0.6166667
-      value: {fileID: 21300000, guid: ddf2057514ab00d43b130e996431b345, type: 3}
-    - time: 0.8
-      value: {fileID: 21300000, guid: 02a3e761f6c1dc749942b287ae62be09, type: 3}
+    - time: 0
+      value: {fileID: -3911660960734983157, guid: 7e027d328c17e834aadb9e9964fbd308, type: 3}
+    - time: 0.5
+      value: {fileID: 2756411818640625597, guid: 7e027d328c17e834aadb9e9964fbd308, type: 3}
+    - time: 1
+      value: {fileID: 493348359619298123, guid: 7e027d328c17e834aadb9e9964fbd308, type: 3}
+    - time: 1.5
+      value: {fileID: 4953152927906166915, guid: 7e027d328c17e834aadb9e9964fbd308, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,16 +46,16 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: e91a252c360dcc242a99bd37d5b071c9, type: 3}
-    - {fileID: 21300000, guid: 18ba828d285babd4db16579a4916d55e, type: 3}
-    - {fileID: 21300000, guid: ddf2057514ab00d43b130e996431b345, type: 3}
-    - {fileID: 21300000, guid: 02a3e761f6c1dc749942b287ae62be09, type: 3}
+    - {fileID: -3911660960734983157, guid: 7e027d328c17e834aadb9e9964fbd308, type: 3}
+    - {fileID: 2756411818640625597, guid: 7e027d328c17e834aadb9e9964fbd308, type: 3}
+    - {fileID: 493348359619298123, guid: 7e027d328c17e834aadb9e9964fbd308, type: 3}
+    - {fileID: 4953152927906166915, guid: 7e027d328c17e834aadb9e9964fbd308, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.81666666
+    m_StopTime: 1.55
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -74,4 +74,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 1.55
+    functionName: Destroy
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

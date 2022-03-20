@@ -5,11 +5,9 @@ using UnityEngine;
 public class AppleFallTrigger : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private BoxCollider2D boxc;
     private SpriteRenderer sr;
 
     private void Awake() {
-        boxc = GetComponent<BoxCollider2D>();
         rb = GetComponentInParent<Rigidbody2D>();
         sr = GetComponentInParent<SpriteRenderer>();
     }
